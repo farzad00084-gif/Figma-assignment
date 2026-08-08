@@ -8,9 +8,7 @@
 }
 
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: #eef1f6;
   color: #1a1a1a;
 }
@@ -311,36 +309,18 @@ body {
 .mentor-card {
   animation: cardFadeIn 0.5s ease forwards;
   opacity: 0;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* Stagger each card slightly for a smoother entrance */
-.mentor-grid .mentor-card:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.mentor-grid .mentor-card:nth-child(2) {
-  animation-delay: 0.1s;
-}
-.mentor-grid .mentor-card:nth-child(3) {
-  animation-delay: 0.15s;
-}
-.mentor-grid .mentor-card:nth-child(4) {
-  animation-delay: 0.2s;
-}
-.mentor-grid .mentor-card:nth-child(5) {
-  animation-delay: 0.25s;
-}
-.mentor-grid .mentor-card:nth-child(6) {
-  animation-delay: 0.3s;
-}
-.mentor-grid .mentor-card:nth-child(7) {
-  animation-delay: 0.35s;
-}
-.mentor-grid .mentor-card:nth-child(8) {
-  animation-delay: 0.4s;
-}
+.mentor-grid .mentor-card:nth-child(1) { animation-delay: 0.05s; }
+.mentor-grid .mentor-card:nth-child(2) { animation-delay: 0.1s; }
+.mentor-grid .mentor-card:nth-child(3) { animation-delay: 0.15s; }
+.mentor-grid .mentor-card:nth-child(4) { animation-delay: 0.2s; }
+.mentor-grid .mentor-card:nth-child(5) { animation-delay: 0.25s; }
+.mentor-grid .mentor-card:nth-child(6) { animation-delay: 0.3s; }
+.mentor-grid .mentor-card:nth-child(7) { animation-delay: 0.35s; }
+.mentor-grid .mentor-card:nth-child(8) { animation-delay: 0.4s; }
 
 /* Lift + deeper shadow on hover */
 .mentor-card:hover {
@@ -363,10 +343,7 @@ body {
 
 /* Smooth transitions on interactive elements */
 .explore-btn {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   box-shadow: 0 4px 10px rgba(124, 92, 252, 0.25);
 }
 
@@ -376,11 +353,7 @@ body {
 }
 
 .book-btn {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .book-btn:hover {
@@ -393,9 +366,7 @@ body {
 }
 
 .search-input {
-  transition:
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .search-input:focus {
@@ -423,3 +394,106 @@ body {
 .badge-new {
   animation: badgePop 0.4s ease 0.3s backwards;
 }
+
+/* =============================================
+   MORE CARD ANIMATIONS (added on top, nothing above changed)
+   ============================================= */
+
+/* Card gets a soft purple-tinted ring on hover, layered with existing shadow */
+.mentor-card:hover {
+  box-shadow: 0 16px 30px rgba(20, 20, 43, 0.12), 0 0 0 1px rgba(124, 92, 252, 0.25);
+}
+
+/* Card presses down slightly on click for tactile feedback */
+.mentor-card:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+/* Verified checkmark gently pulses to draw the eye */
+@keyframes verifiedPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.mentor-card:hover .verified-icon {
+  animation: verifiedPulse 0.6s ease;
+}
+
+/* Star rating gives a little spin + pop when the card is hovered */
+@keyframes starSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.3); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.mentor-card:hover .star-icon {
+  animation: starSpin 0.5s ease;
+}
+
+/* Mentor name nudges right slightly on hover */
+.mentor-name {
+  transition: transform 0.25s ease;
+}
+
+.mentor-card:hover .mentor-name {
+  transform: translateX(2px);
+}
+
+/* Price ticks upward slightly on hover, drawing attention to it */
+.mentor-price {
+  transition: transform 0.25s ease;
+}
+
+.mentor-card:hover .mentor-price {
+  transform: translateY(-2px);
+}
+
+/* Buttons get a diagonal light sweep on hover */
+.book-btn,
+.explore-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.book-btn::after,
+.explore-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+}
+
+.book-btn:hover::after,
+.explore-btn:hover::after {
+  animation: btnShine 0.7s ease forwards;
+}
+
+@keyframes btnShine {
+  from { left: -75%; }
+  to { left: 125%; }
+}
+
+/* Company/meta row fades and rises in slightly after the card lands */
+@keyframes metaFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mentor-meta {
+  animation: metaFadeIn 0.5s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.mentor-grid .mentor-card:nth-child(1) .mentor-meta { animation-delay: 0.25s; }
+.mentor-grid .mentor-card:nth-child(2) .mentor-meta { animation-delay: 0.3s; }
+.mentor-grid .mentor-card:nth-child(3) .mentor-meta { animation-delay: 0.35s; }
+.mentor-grid .mentor-card:nth-child(4) .mentor-meta { animation-delay: 0.4s; }
+.mentor-grid .mentor-card:nth-child(5) .mentor-meta { animation-delay: 0.45s; }
+.mentor-grid .mentor-card:nth-child(6) .mentor-meta { animation-delay: 0.5s; }
+.mentor-grid .mentor-card:nth-child(7) .mentor-meta { animation-delay: 0.55s; }
+.mentor-grid .mentor-card:nth-child(8) .mentor-meta { animation-delay: 0.6s; }
