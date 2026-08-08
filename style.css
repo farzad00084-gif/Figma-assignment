@@ -291,3 +291,135 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* =============================================
+   ANIMATIONS & SHADOWS (added on top, nothing above changed)
+   ============================================= */
+
+/* Fade + rise-in animation for each card on page load */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mentor-card {
+  animation: cardFadeIn 0.5s ease forwards;
+  opacity: 0;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Stagger each card slightly for a smoother entrance */
+.mentor-grid .mentor-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.mentor-grid .mentor-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.mentor-grid .mentor-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.mentor-grid .mentor-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.mentor-grid .mentor-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.mentor-grid .mentor-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.mentor-grid .mentor-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.mentor-grid .mentor-card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+/* Lift + deeper shadow on hover */
+.mentor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(20, 20, 43, 0.12);
+}
+
+/* Subtle zoom on the photo when the card is hovered */
+.mentor-photo-wrap {
+  overflow: hidden;
+}
+
+.mentor-photo {
+  transition: transform 0.35s ease;
+}
+
+.mentor-card:hover .mentor-photo {
+  transform: scale(1.06);
+}
+
+/* Smooth transitions on interactive elements */
+.explore-btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  box-shadow: 0 4px 10px rgba(124, 92, 252, 0.25);
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(124, 92, 252, 0.35);
+}
+
+.book-btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(20, 20, 43, 0.1);
+}
+
+.book-btn-primary:hover {
+  box-shadow: 0 6px 14px rgba(124, 92, 252, 0.25);
+}
+
+.search-input {
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #7c5cfc;
+  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.15);
+}
+
+/* Soft shadow under the toolbar search box at rest */
+.search-input {
+  box-shadow: 0 1px 2px rgba(20, 20, 43, 0.04);
+}
+
+/* Badge gets a tiny pop-in animation */
+@keyframes badgePop {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.badge-new {
+  animation: badgePop 0.4s ease 0.3s backwards;
+}
