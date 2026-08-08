@@ -1,214 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Your Mentor</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Mentor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================= -->
+    <!-- MENTORS SECTION — full page section wrapper    -->
+    <!-- ============================================= -->
+    <section class="mentors-section">
+      <!-- ===== Header: title + subtitle ===== -->
+      <div class="mentors-header">
+        <h1 class="mentors-title">
+          1,600+ mentors are just a free<br />Trial session away
+        </h1>
+        <p class="mentors-subtitle">
+          Choose your ideal mentor and get started with a FREE trial session
+        </p>
+      </div>
 
-  <!-- ============================================= -->
-  <!-- MENTORS SECTION — full page section wrapper    -->
-  <!-- ============================================= -->
-  <section class="mentors-section">
+      <!-- ===== Toolbar: search box + explore button ===== -->
+      <div class="mentors-toolbar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search by company, skills"
+        />
+        <button class="explore-btn">Explore all mentors</button>
+      </div>
 
-    <!-- ===== Header: title + subtitle ===== -->
-    <div class="mentors-header">
-      <h1 class="mentors-title">1,600+ mentors are just a free<br>Trial session away</h1>
-      <p class="mentors-subtitle">Choose your ideal mentor and get started with a FREE trial session</p>
-    </div>
-
-    <!-- ===== Toolbar: search box + explore button ===== -->
-    <div class="mentors-toolbar">
-      <input type="text" class="search-input" placeholder="Search by company, skills">
-      <button class="explore-btn">Explore all mentors</button>
-    </div>
-
-    <!-- ===== Mentor cards grid ===== -->
-    <div class="mentor-grid">
-
-      <!-- ---- Card 1: Hasib Waliyan ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs1.jpg" alt="Hasib Waliyan" class="mentor-photo">
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Hasib Waliyan <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Quality Assurance Engineer</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Microsoft | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 5 <span class="review-count">(12 Reviews)</span></span>
+      <!-- ===== Mentor cards grid ===== -->
+      <div class="mentor-grid">
+        <!-- ---- Card 1: Hasib Waliyan ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img
+              src="images/hs1.jpg"
+              alt="Hasib Waliyan"
+              class="mentor-photo"
+            />
           </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$35.00 <span class="price-unit">/ Month</span></span>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Hasib Waliyan
+              <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Quality Assurance Engineer</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Microsoft | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 5
+                <span class="review-count">(12 Reviews)</span></span
+              >
             </div>
-            <button class="book-btn book-btn-primary">Book a Free Trail</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---- Card 2: Patrice Long (New Mentor) ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs2.jpg" alt="Patrice Long" class="mentor-photo">
-          <span class="badge-new">New Mentor</span>
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Patrice Long <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Senior Business Analyst</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Amazon | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 0 <span class="review-count">(12 Reviews)</span></span>
-          </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$40.00 <span class="price-unit">/ Month</span></span>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$35.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn book-btn-primary">
+                Book a Free Trail
+              </button>
             </div>
-            <button class="book-btn">Book a Free Trail</button>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- ---- Card 3: Wahid Faramarz ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs3.jpg" alt="Wahid Faramarz" class="mentor-photo">
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Wahid Faramarz <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Senior Data Engineer</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Insta Cart | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 4.5 <span class="review-count">(12 Reviews)</span></span>
+        <!-- ---- Card 2: Patrice Long (New Mentor) ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img src="images/hs2.jpg" alt="Patrice Long" class="mentor-photo" />
+            <span class="badge-new">New Mentor</span>
           </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$60.00 <span class="price-unit">/ Month</span></span>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Patrice Long <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Senior Business Analyst</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Amazon | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 0
+                <span class="review-count">(12 Reviews)</span></span
+              >
             </div>
-            <button class="book-btn">Book a Free Trail</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---- Card 4: Kevin De Bruyne ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs4.jpg" alt="Kevin De Bruyne" class="mentor-photo">
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Kevin De Bruyne <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Frontend Engineer</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Zoom | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 5 <span class="review-count">(12 Reviews)</span></span>
-          </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$25.00 <span class="price-unit">/ Month</span></span>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$40.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
             </div>
-            <button class="book-btn">Book a Free Trail</button>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- ---- Card 5: Laura Rose ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs5.jpg" alt="Laura Rose" class="mentor-photo">
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Laura Rose <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">UI|UX Desikgner</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Insta Cart | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 5 <span class="review-count">(12 Reviews)</span></span>
+        <!-- ---- Card 3: Wahid Faramarz ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img
+              src="images/hs3.jpg"
+              alt="Wahid Faramarz"
+              class="mentor-photo"
+            />
           </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$55.00 <span class="price-unit">/ Month</span></span>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Wahid Faramarz
+              <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Senior Data Engineer</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Insta Cart | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 4.5
+                <span class="review-count">(12 Reviews)</span></span
+              >
             </div>
-            <button class="book-btn">Book a Free Trail</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---- Card 6: Tom Smith ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs7.jpg" alt="Tom Smith" class="mentor-photo">
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Tom Smith <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Frontend Engineer</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Microsoft | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 5 <span class="review-count">(12 Reviews)</span></span>
-          </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$44.00 <span class="price-unit">/ Month</span></span>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$60.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
             </div>
-            <button class="book-btn">Book a Free Trail</button>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- ---- Card 7: Sarah Tailor ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs6.jpg" alt="Sarah Tailor" class="mentor-photo">
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">Sarah Tailor <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Quality Assurance Engineer</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Microsoft | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 5 <span class="review-count">(12 Reviews)</span></span>
+        <!-- ---- Card 4: Kevin De Bruyne ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img
+              src="images/hs4.jpg"
+              alt="Kevin De Bruyne"
+              class="mentor-photo"
+            />
           </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$54.00 <span class="price-unit">/ Month</span></span>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Kevin De Bruyne
+              <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Frontend Engineer</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Zoom | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 5
+                <span class="review-count">(12 Reviews)</span></span
+              >
             </div>
-            <button class="book-btn">Book a Free Trail</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- ---- Card 8: James William (New Mentor) ---- -->
-      <article class="mentor-card">
-        <div class="mentor-photo-wrap">
-          <img src="images/hs8.jpg" alt="James William" class="mentor-photo">
-          <span class="badge-new">New Mentor</span>
-        </div>
-        <div class="mentor-info">
-          <h3 class="mentor-name">James William <span class="verified-icon" title="Verified">✔</span></h3>
-          <p class="mentor-role">Software Engineer</p>
-          <div class="mentor-meta">
-            <span class="mentor-company">@ Figma | 5 yrs Exp.</span>
-            <span class="mentor-rating"><span class="star-icon">★</span> 0 <span class="review-count">(12 Reviews)</span></span>
-          </div>
-          <div class="mentor-footer">
-            <div class="mentor-price">
-              <span class="price-label">Starting from</span>
-              <span class="price-amount">$30.00 <span class="price-unit">/ Month</span></span>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$25.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
             </div>
-            <button class="book-btn">Book a Free Trail</button>
           </div>
-        </div>
-      </article>
+        </article>
 
-    </div><!-- /.mentor-grid -->
+        <!-- ---- Card 5: Laura Rose ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img src="images/hs5.jpg" alt="Laura Rose" class="mentor-photo" />
+          </div>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Laura Rose <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">UI|UX Desikgner</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Insta Cart | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 5
+                <span class="review-count">(12 Reviews)</span></span
+              >
+            </div>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$55.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
+            </div>
+          </div>
+        </article>
 
-  </section><!-- /.mentors-section -->
+        <!-- ---- Card 6: Tom Smith ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img src="images/hs7.jpg" alt="Tom Smith" class="mentor-photo" />
+          </div>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Tom Smith <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Frontend Engineer</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Microsoft | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 5
+                <span class="review-count">(12 Reviews)</span></span
+              >
+            </div>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$44.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
+            </div>
+          </div>
+        </article>
 
-</body>
+        <!-- ---- Card 7: Sarah Tailor ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img src="images/hs6.jpg" alt="Sarah Tailor" class="mentor-photo" />
+          </div>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              Sarah Tailor <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Quality Assurance Engineer</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Microsoft | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 5
+                <span class="review-count">(12 Reviews)</span></span
+              >
+            </div>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$54.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- Card 8: James William (New Mentor) ---- -->
+        <article class="mentor-card">
+          <div class="mentor-photo-wrap">
+            <img
+              src="images/hs8.jpg"
+              alt="James William"
+              class="mentor-photo"
+            />
+            <span class="badge-new">New Mentor</span>
+          </div>
+          <div class="mentor-info">
+            <h3 class="mentor-name">
+              James William
+              <span class="verified-icon" title="Verified">✔</span>
+            </h3>
+            <p class="mentor-role">Software Engineer</p>
+            <div class="mentor-meta">
+              <span class="mentor-company">@ Figma | 5 yrs Exp.</span>
+              <span class="mentor-rating"
+                ><span class="star-icon">★</span> 0
+                <span class="review-count">(12 Reviews)</span></span
+              >
+            </div>
+            <div class="mentor-footer">
+              <div class="mentor-price">
+                <span class="price-label">Starting from</span>
+                <span class="price-amount"
+                  >$30.00 <span class="price-unit">/ Month</span></span
+                >
+              </div>
+              <button class="book-btn">Book a Free Trail</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- /.mentor-grid -->
+    </section>
+    <!-- /.mentors-section -->
+    <script>
+      alert("Welcome ");
+    </script>
+  </body>
 </html>
